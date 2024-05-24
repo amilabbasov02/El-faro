@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/select2.mis.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <title>El Faro</title>
+</head>
+<body>
+    <section id="sidebar">
+        <div class="sidebar_top">
+            <a href="" class="logo">
+                <img src="./img/Logo.png" alt="">
+            </a>
+            <ul class="navbar">
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/home.png" alt="">
+                        Ana səhifə
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/user.png" alt="">
+                        İstifadəçilər
+                    </a>
+                </li>
+                <li class="nav_item active">
+                    <a href="#">
+                        <img src="./img/category.png" alt="">
+                        Kateqoriyalar
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/room.png" alt="">
+                        Otaqlar
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/reserve.png" alt="">
+                        Rezervasiyalar
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/customer.png" alt="">
+                        Müştərilər
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar_bottom">
+            <img src="./img/Profile.png" class="user_img" alt="">
+            <p class="user_name">
+                Shahin Shahbazov
+            </p>
+            <a href="#" class="exit">
+                <img src="./img/logout.png" alt="">
+            </a>
+        </div>
+    </section>
+    <main>
+        <header>
+            <div class="container">                
+                <h1 class="head_text">
+                    Kateqoriyalar
+                </h1>
+                <a href="#" class="new_btn">
+                    <img src="./img/plus.png" alt="">
+                    Yarat
+                </a>
+            </div>
+        </header>
+        <section id="reservation" class="main_block container">
+            <div class="filter">
+                <form action="" class="filter_form users_form">
+                    <div class="buttons">
+                        <label for="">
+                            <input type="text" class="users_input" placeholder="Ad axtar">
+                        </label>
+                        <button class="search_btn">
+                            Axtar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="table">
+            <div class="container">
+                <table>
+                    <tr class="table_head">
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Ad
+                        </th>
+                        <th>
+                            Qiymət
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            430 man
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            430 man
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            430 man
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            430 man
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="table_bottom">
+                    <div class="rows">
+                        <p>Rows per page</p>
+                        <label for="">
+                            <select name="" id="" class="number_select">
+                                <option value="deluxe king">
+                                    10
+                                </option>
+                                <option value="Junior suite">
+                                    20
+                                </option>
+                                <option value="Standart">
+                                    30
+                                </option>
+                                <option value="Family suite">
+                                    40
+                                </option>
+                                <option value="Suite">
+                                    50
+                                </option>
+                                <option value="Suite">
+                                    100
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="paginations">
+                        <a href="#" class="left">
+                            <img class="left_active" src="./img/arrow-right.svg" alt="">
+                            <img class="left_disable" src="./img/arrow-left.svg" alt="">
+                        </a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="right">
+                            <img class="right_active" src="./img/arrow-right.svg" alt="">
+                            <img class="right_disable" src="./img/arrow-left.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

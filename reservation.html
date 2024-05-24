@@ -138,7 +138,7 @@
                             </div>
                         </label>
                         <label for="">
-                            Kateqoriya
+                            Müştəri
                             <select name="" id="" class="room_select">
                                 <option value="deluxe king">
                                     Deluxe king
@@ -160,39 +160,37 @@
                                 </option>
                             </select>
                         </label>
-                        <label for="">
-                            Çıxış tarixi
-                            <select name="" id="" class="room_select">
-                                <option value="deluxe king">
-                                    Deluxe king
-                                </option>
-                                <option value="Junior suite">
-                                    Junior suite
-                                </option>
-                                <option value="Standart">
-                                    Standart
-                                </option>
-                                <option value="Family suite">
-                                    Family suite
-                                </option>
-                                <option value="Suite">
-                                    Suite
-                                </option>
-                                <option value="Suite">
-                                    Suite
-                                </option>
-                            </select>
+                        <label class="status_select">
+                            Status
+                            <input type="hidden" id="selectedValue1" name="selectedValue1">
+                            <div id="listContainer1" class="list_drop">
+                                <ul id="optionsList1">
+                                    <li class="option1 status_wait">Gözləyir</li>
+                                    <li class="option1 status_finished">Bitmiş</li>
+                                    <li class="option1 status_active">Aktiv</li>
+                                    <li class="option1 status_cancel">Ləğv</li>
+                                </ul>
+                            </div>
+                            <div id="inputContainer1" class="status_drop datepicker-input-group">
+                                <span id="selectedOption1">Seç</span>
+                            </div>
                         </label>
-                        <input type="hidden" id="selectedValue" name="selectedValue">
-                        <div id="listContainer">
-                            <ul id="optionsList">
-                                <li class="option option1">Option 1</li>
-                                <li class="option option2">Option 2</li>
-                                <li class="option option3">Option 3</li>
-                            </ul>
-                        </div>
-                        <div id="inputContainer">
-                            <span id="selectedOption"></span>
+                        
+                        <label class="status_select">
+                            Status
+                            <input type="hidden" id="selectedValue2" name="selectedValue2">
+                            <div id="listContainer2" class="list_drop">
+                                <ul id="optionsList2">
+                                    <li class="option2 status_wait">Gözləyir</li>
+                                    <li class="option2 status_finished">Bitmiş</li>
+                                    <li class="option2 status_active">Aktiv</li>
+                                    <li class="option2 status_cancel">Ləğv</li>
+                                </ul>
+                            </div>
+                            <div id="inputContainer2" class="status_drop datepicker-input-group">
+                                <span id="selectedOption2">Seç</span>
+                            </div>
+                        </label>
                         </div>
                     <div class="buttons">
                         <a href="javascript:void(0)" class="more_btn">
@@ -208,6 +206,422 @@
                         </button>
                     </div>
                 </form>
+            </div>
+        </section>
+        <section id="table">
+            <div class="container">
+                <table>
+                    <tr class="table_head">
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Rez. tipi
+                        </th>
+                        <th>
+                            Kateqoriya
+                        </th>
+                        <th>
+                            Otaq k.
+                        </th>
+                        <th>
+                            Giriş tarixi
+                        </th>
+                        <th>
+                            Çıxış tarixi
+                        </th>
+                        <th>
+                            Qiymət
+                        </th>
+                        <th>
+                            Ödəniş stat
+                        </th>
+                        <th>
+                            Müştəri
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table_body">
+                        <td>
+                            59420 
+                        </td>
+                        <td>
+                            Müştəri
+                        </td>
+                        <td>
+                            Deluxe king
+                        </td>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            18.05.24
+                        </td>
+                        <td>
+                            20.05.24
+                        </td>
+                        <td>
+                            350 azn
+                        </td>
+                        <td>
+                            <span class="status_wait">Gözləyir</span>
+                        </td>
+                        <td>
+                            Emil A
+                        </td>
+                        <td>
+                            <span class="status_finished">Bitmiş</span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <img src="./img/edit.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="table_bottom">
+                    <div class="rows">
+                        <p>Rows per page</p>
+                        <label for="">
+                            <select name="" id="" class="number_select">
+                                <option value="deluxe king">
+                                    10
+                                </option>
+                                <option value="Junior suite">
+                                    20
+                                </option>
+                                <option value="Standart">
+                                    30
+                                </option>
+                                <option value="Family suite">
+                                    40
+                                </option>
+                                <option value="Suite">
+                                    50
+                                </option>
+                                <option value="Suite">
+                                    100
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="paginations">
+                        <a href="#" class="left">
+                            <img class="left_active" src="./img/arrow-right.svg" alt="">
+                            <img class="left_disable" src="./img/arrow-left.svg" alt="">
+                        </a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="right">
+                            <img class="right_active" src="./img/arrow-right.svg" alt="">
+                            <img class="right_disable" src="./img/arrow-left.svg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
