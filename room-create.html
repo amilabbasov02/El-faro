@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/select2.mis.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <title>El Faro</title>
+</head>
+<body>
+    <section id="sidebar">
+        <div class="sidebar_top">
+            <a href="" class="logo">
+                <img src="./img/Logo.png" alt="">
+            </a>
+            <ul class="navbar">
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/home.png" alt="">
+                        Ana səhifə
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/user.png" alt="">
+                        İstifadəçilər
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/category.png" alt="">
+                        Kateqoriyalar
+                    </a>
+                </li>
+                <li class="nav_item active">
+                    <a href="#">
+                        <img src="./img/room.png" alt="">
+                        Otaqlar
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/reserve.png" alt="">
+                        Rezervasiyalar
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/customer.png" alt="">
+                        Müştərilər
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar_bottom">
+            <img src="./img/Profile.png" class="user_img" alt="">
+            <p class="user_name">
+                Shahin Shahbazov
+            </p>
+            <a href="#" class="exit">
+                <img src="./img/logout.png" alt="">
+            </a>
+        </div>
+    </section>
+    <main>
+        <section id="reservation" class="main_block container create">
+            <h1 class="head_text">
+                Otaq yarat
+            </h1>
+            <form action="" class="create_form filter">
+                <label for="">
+                    Kateqoriya
+                    <select name="" id="" class="room_select">
+                        <option value="deluxe king">
+                            Deluxe king
+                        </option>
+                        <option value="Junior suite">
+                            Junior suite
+                        </option>
+                        <option value="Standart">
+                            Standart
+                        </option>
+                        <option value="Family suite">
+                            Family suite
+                        </option>
+                        <option value="Suite">
+                            Suite
+                        </option>
+                        <option value="Suite">
+                            Suite
+                        </option>
+                    </select>
+                </label>
+                <label class="status_select">
+                    Status
+                    <input type="hidden" id="selectedValue2" name="selectedValue2">
+                    <div id="listContainer2" class="list_drop">
+                        <ul id="optionsList2">
+                            <li class="option2 status_wait">Gözləyir</li>
+                            <li class="option2 status_finished">Bitmiş</li>
+                            <li class="option2 status_active">Aktiv</li>
+                            <li class="option2 status_cancel">Ləğv</li>
+                        </ul>
+                    </div>
+                    <div id="inputContainer2" class="status_drop datepicker-input-group">
+                        <span id="selectedOption2">Seç</span>
+                    </div>
+                </label>
+                <label for="">
+                    Otaq kodu
+                    <input type="text" class="users_input" placeholder="Otaq kodu daxil edin">
+                </label>
+                <div class="delete_div">
+                    <button class="delete">
+                        <img src="./img/trash.svg" alt="">
+                        Kateqoriyanı sil
+                    </button>
+                </div>
+                <div class="save_div">
+                    <button class="new_btn">
+                        Yadda saxla
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

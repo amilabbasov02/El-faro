@@ -80,4 +80,127 @@ $(document).ready(function() {
         $(".filter_inputs").toggleClass("active")
         $(this).toggleClass("active")
     })
-});
+    $(function() {
+        $('input[name="daterange"]').daterangepicker({
+            opens: 'left',
+            locale: {
+                format: 'MM/DD/YYYY'
+            }
+        }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('MM/DD/YYYY') + ' to ' + end.format('MM/DD/YYYY'));
+        });
+    });
+    var options = {
+        series: [
+            {
+                name: 'Rezervasiya sayı',
+                type: 'line',
+                data: [
+                    [new Date('2024-05-21').getTime(), 10],
+                    [new Date('2024-05-22').getTime(), 14],
+                    [new Date('2024-05-23').getTime(), 6],
+                    [new Date('2024-05-24').getTime(), 18],
+                    [new Date('2024-05-25').getTime(), 8],
+                    [new Date('2024-05-26').getTime(), 12],
+                    [new Date('2024-05-27').getTime(), 16]
+                ]
+            },
+            {
+                name: 'Məbləğ',
+                type: 'line',
+                data: [
+                    [new Date('2024-05-21').getTime(), 10],
+                    [new Date('2024-05-22').getTime(), 12],
+                    [new Date('2024-05-23').getTime(), 6],
+                    [new Date('2024-05-24').getTime(), 15],
+                    [new Date('2024-05-25').getTime(), 8],
+                    [new Date('2024-05-26').getTime(), 10],
+                    [new Date('2024-05-27').getTime(), 12]
+                ]
+            },
+            {
+                name: 'Ödənilmiş məbləğ',
+                type: 'line',
+                data: [
+                    [new Date('2024-05-21').getTime(), 8],
+                    [new Date('2024-05-22').getTime(), 12],
+                    [new Date('2024-05-23').getTime(), 5],
+                    [new Date('2024-05-24').getTime(), 14],
+                    [new Date('2024-05-25').getTime(), 8],
+                    [new Date('2024-05-26').getTime(), 10],
+                    [new Date('2024-05-27').getTime(), 10]
+                ]
+            }
+        ],
+        chart: {
+            type: 'line',
+            height: 400,
+            stacked: false,
+        },
+        colors: ['#FFA500', '#0000FF', '#008000'],
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth',
+            width: [2, 2, 2]
+        },
+        legend: {
+            position: 'bottom',
+            horizontalAlign: 'center'
+        },
+        xaxis: {
+            type: 'datetime',
+            labels: {
+                format: 'dd.MM.yyyy'
+            }
+        },
+        yaxis: [
+            {
+                seriesName: 'Rezervasiya sayı',
+                min: 0,
+                max: 20,
+                labels: {
+                    formatter: function (val) {
+                        return val ;
+                    }
+                },
+            },
+            {
+                seriesName: 'Məbləğ',
+                opposite: true,
+                min: 0,
+                max: 20,
+                labels: {
+                    formatter: function (val) {
+                        return val + "man";
+                    }
+                },
+            },
+            {
+                seriesName: 'Ödənilmiş məbləğ',
+                opposite: false,
+                min: 0,
+                max: 20,
+                labels: {
+                    formatter: function (val) {
+                        return val + "man";
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        show: true // x ekseninde etiketlerin gösterilmesini sağlar
+                    }
+                }
+            }
+        ],
+        tooltip: {
+            x: {
+                format: 'dd MMM yyyy'
+            },
+        },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+})
