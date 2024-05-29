@@ -189,7 +189,6 @@ header .container{
     background: #fff;
 }
 .filter label{
-    overflow: hidden;
     color: #17181A;
     font-size: 12px;
     font-style: normal;
@@ -313,7 +312,6 @@ header .container{
     margin-top: 12px;
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 .datepicker-input-group::after{
@@ -1214,10 +1212,33 @@ header .container{
 .err{
     color: #E07E1B;
     display: none;
+    position: absolute;
+    bottom: -18px;
 }
 .error .err{
     display: inline;
 }
+.error{
+    position: relative;
+}
 a{
     text-decoration: none;
+}
+.notification{
+    border-radius: 8px;
+    background: var(--Primary-10, #241B0A);
+    display: none;
+    width: 356px;
+    height: 48px;
+    padding: 0px 16px;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }

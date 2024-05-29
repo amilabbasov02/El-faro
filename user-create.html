@@ -68,7 +68,7 @@
             <h1 class="head_text">
                 Müştəri
             </h1>
-            <form action="" class="create_form filter">
+            <form action="javascript:void(0)" class="create_form filter">
                 <label for="name"" class="error">
                     Ad
                     <input id="name" type="text" class="users_input" placeholder="Ad daxil edin">
@@ -98,8 +98,8 @@
                     Doğum tarixi
                     <div class="datepicker-input-group">     
                         <input id="birthday" type="text"  placeholder="Seçin" class="birthday">
+                        <span class="err">düzgün daxil edilməyib</span>
                     </div>
-                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
                 <label for="">
                     Şifrə / Şifrəni dəyiş
@@ -107,8 +107,8 @@
                         <input id="pass" type="password" class="users_input" placeholder="Şifrənizi daxil edin">
                         <img src="./img/eye.svg" style="display: none;" alt="">
                         <img src="./img/eye_slash.svg" alt="">
+                        <span class="err">düzgün daxil edilməyib</span>
                     </div>
-                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
                 <div class="delete_div">
                     <button class="delete">
@@ -121,6 +121,7 @@
                         Yadda saxla
                     </button>
                 </div>
+                <span class="notification">Dəyişikliklər yadda saxlanıldı</span>
             </form>
         </section>
     </main>

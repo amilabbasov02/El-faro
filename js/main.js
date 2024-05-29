@@ -105,6 +105,21 @@ $(document).ready(function() {
             $(".password img").toggle();
         }
     });
+    $('.save_div .new_btn').on('click', function() {
+        $('.create_form input').each(function() {
+            var input = $(this);
+            if (input.val().trim() === '') {
+                input.parent().addClass('error');
+            } else {
+                input.parent().removeClass('error');
+            }
+        });
+        $('.notification').css('display', 'flex').fadeIn();
+
+        setTimeout(function() {
+            $('.notification').fadeOut();
+        }, 2000);
+    });
     var options = {
         series: [
             {
