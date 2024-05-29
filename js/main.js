@@ -34,51 +34,51 @@ $(document).ready(function() {
         yearRange: "c-100:c+10"
     })
     function selectOption1(optionElement) {
-        var selectedSpan = $("#selectedOption1");
-        var selectedValue = $("#selectedValue1");
+        var selectedSpan = $("#SelectedStatusDiv1");
+        var selectedValue = $("#selectedStatus1");
         var selectedClass = $(optionElement).attr("class").split(" ")[1];
         var selectedText = $(optionElement).text();
         selectedSpan.attr("class", selectedClass);
         selectedSpan.text(selectedText);
         selectedSpan.css("background-color", $(optionElement).css("background-color"));
         selectedValue.val(selectedText).attr("class", selectedClass);
-        $("#listContainer1").hide();
+        $("#statusList1").hide();
     }
-
+    
     function toggleListVisibility1() {
-        $("#listContainer1").toggle();
+        $("#statusList1").toggle();
     }
-
-    $("#listContainer1 .option1").click(function() {
+    
+    $(document).on("click", "#statusList1 .statusOption1", function() {
         selectOption1(this);
     });
-
-    $("#inputContainer1").click(function() {
+    
+    $("#statusContainer1").click(function() {
         toggleListVisibility1();
     });
+    
 
-    // İkinci etiket ve liste için
-    function selectOption2(optionElement) {
-        var selectedSpan = $("#selectedOption2");
-        var selectedValue = $("#selectedValue2");
+    function selectstatusOption(optionElement) {
+        var selectedSpan = $("#SelectedStatusDiv");
+        var selectedValue = $("#selectedStatus");
         var selectedClass = $(optionElement).attr("class").split(" ")[1];
         var selectedText = $(optionElement).text();
         selectedSpan.attr("class", selectedClass);
         selectedSpan.text(selectedText);
         selectedSpan.css("background-color", $(optionElement).css("background-color"));
         selectedValue.val(selectedText).attr("class", selectedClass);
-        $("#listContainer2").hide();
+        $("#statusList").hide();
     }
 
     function toggleListVisibility2() {
-        $("#listContainer2").toggle();
+        $("#statusList").toggle();
     }
 
-    $("#listContainer2 .option2").click(function() {
-        selectOption2(this);
+    $(document).on("click", "#statusList .statusOption", function() {
+        selectstatusOption(this);
     });
 
-    $("#inputContainer2").click(function() {
+    $(document).on("click", "#statusContainer", function() {
         toggleListVisibility2();
     });
     $(".more_btn").click(function(){
@@ -105,20 +105,64 @@ $(document).ready(function() {
             $(".password img").toggle();
         }
     });
-    $('.save_div .new_btn').on('click', function() {
+    $('.create_form').on('submit', function() {
+        event.preventDefault();
+
+        var allFilled = true;
+    
         $('.create_form input').each(function() {
             var input = $(this);
             if (input.val().trim() === '') {
                 input.parent().addClass('error');
+                allFilled = false;
             } else {
                 input.parent().removeClass('error');
             }
         });
-        $('.notification').css('display', 'flex').fadeIn();
-
+    
+        if (allFilled) {
+            $('.notification_access').css('display', 'flex').fadeIn();
+    
+            setTimeout(function() {
+                $('.notification_access').fadeOut();
+            }, 2000);
+        }
+    });
+    $(".delete").click(function(){
+        $(".pop_up").toggle()
+    })
+    $(".back_btn").click(function(){
+        $(".pop_up").toggle()
+    })
+    $(".close_btn").click(function(){
+        $(".pop_up").toggle()
+    })
+    $(".pop_bg").click(function(){
+        $(".pop_up").toggle()
+    })
+    $(".delete_btn").click(function(){
+        $('.notification_deleted').css('display', 'flex').fadeIn();
         setTimeout(function() {
-            $('.notification').fadeOut();
+            $('.notification_deleted').fadeOut();
         }, 2000);
+        $(".pop_up").toggle()
+    })
+    $(".text_input").on("input", function(){
+        var inputValue = $(this).val();
+        $(this).val(inputValue.replace(/[^a-zA-Z]/g, ''));
+    });
+    $(".birthday").on("input",function(){
+        var inputValue = $(this).val();
+        var numericValue = inputValue.replace(/[^\d./\-]/g, '');
+    })
+    $(".phone").on("input", function(){
+        var inputValue = $(this).val();
+        var numericValue = inputValue.replace(/\D/g, '');
+        if (numericValue.length > 0) {
+            numericValue = "+" + numericValue;
+        }
+        var formattedValue = numericValue.replace(/(\+\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5");
+        $(this).val(formattedValue);    
     });
     var options = {
         series: [

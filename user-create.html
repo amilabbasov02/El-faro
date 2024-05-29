@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./css/jquery-ui.min.css">
     <title>El Faro</title>
 </head>
+
 <body>
     <section id="sidebar">
         <div class="sidebar_top">
@@ -68,38 +70,49 @@
             <h1 class="head_text">
                 Müştəri
             </h1>
-            <form action="javascript:void(0)" class="create_form filter">
-                <label for="name"" class="error">
+            <form action="" class="create_form filter">
+                <label for="name">
                     Ad
-                    <input id="name" type="text" class="users_input" placeholder="Ad daxil edin">
+                    <input id="name" type="text" class="users_input text_input" placeholder="Ad daxil edin">
                     <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="work">
+                <label >
                     Vəzifəsi
-                    <input id="work" type="text" class="users_input phone" placeholder="Vəzifəni daxil edin">
-                    <span class="err">düzgün daxil edilməyib</span>
+                    <select name="" id="" class="room_select">
+                        <option value="deluxe king">
+                            Deluxe king
+                        </option>
+                        <option value="Junior suite">
+                            Junior suite
+                        </option>
+                        <option value="Standart">
+                            Standart
+                        </option>
+                        <option value="Family suite">
+                            Family suite
+                        </option>
+                        <option value="Suite">
+                            Suite
+                        </option>
+                        <option value="Suite">
+                            Suite
+                        </option>
+                    </select>
                 </label>
                 <label for="surname">
                     Soyadı
-                    <input id="surname" type="text" class="users_input" placeholder="Soyad daxil edin">
+                    <input id="surname" type="text" class="users_input text_input" placeholder="Soyad daxil edin">
                     <span class="err">düzgün daxil edilməyib</span>
                 </label>
                 <label for="phone">
                     Telefon nömrəsi
-                    <input id="phone" type="text" class="users_input phone" placeholder="+994 55 555 55 55">
+                    <input id="phone" type="text" maxlength="17" class="users_input phone" placeholder="+994 55 555 55 55">
                     <span class="err">düzgün daxil edilməyib</span>
                 </label>
                 <label for="e-mail">
                     E-poçt
                     <input id="e-mail" type="email" class="users_input phone" placeholder="E-poçt daxil edin">
                     <span class="err">düzgün daxil edilməyib</span>
-                </label>
-                <label for="birthday" class="room_number ">
-                    Doğum tarixi
-                    <div class="datepicker-input-group">     
-                        <input id="birthday" type="text"  placeholder="Seçin" class="birthday">
-                        <span class="err">düzgün daxil edilməyib</span>
-                    </div>
                 </label>
                 <label for="">
                     Şifrə / Şifrəni dəyiş
@@ -111,17 +124,41 @@
                     </div>
                 </label>
                 <div class="delete_div">
-                    <button class="delete">
+                    <a href="javascript:void(0)" class="delete">
                         <img src="./img/trash.svg" alt="">
-                        İstifadəçini sil
-                    </button>
+                        Müştərini sil
+                    </a>
+                    <div class="pop_up">
+                        <div class="pop_bg"></div>
+                        <div class="pop_up_main">
+                            <h4 class="pop_up_head">
+                                Müştərini sil
+                                <div class="close_btn">
+                                    <img src="./img/x_icon.svg" alt="">
+                                </div>
+                            </h4>
+                            <p class="pop_up_text">
+                                Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.
+                                Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <div class="pop_up_buttons">   
+                                <a class="back_btn" href="javascript:void(0)">
+                                    Geri qayıt
+                                </a>
+                                <a class="delete_btn" href="javascript:void(0)">
+                                    Sil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="save_div">
                     <button class="new_btn">
                         Yadda saxla
                     </button>
                 </div>
-                <span class="notification">Dəyişikliklər yadda saxlanıldı</span>
+                <span class="notification notification_deleted"><img src="./img/customer.png" alt="">Müştəri rezervasiyadan silindi</span>
+                <span class="notification notification_access"><img src="./img/customer.png" alt="">Dəyişikliklər yadda saxlanıldı</span>
             </form>
         </section>
     </main>
@@ -133,4 +170,5 @@
     <script src="./js/select2.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>

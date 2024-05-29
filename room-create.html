@@ -94,34 +94,61 @@
                 </label>
                 <label class="status_select">
                     Status
-                    <input type="hidden" id="selectedValue2" name="selectedValue2">
-                    <div id="listContainer2" class="list_drop">
-                        <ul id="optionsList2">
-                            <li class="option2 status_wait">Gözləyir</li>
-                            <li class="option2 status_finished">Bitmiş</li>
-                            <li class="option2 status_active">Aktiv</li>
-                            <li class="option2 status_cancel">Ləğv</li>
+                    <input type="hidden" id="selectedStatus" name="selectedStatus">
+                    <div id="statusList" class="list_drop">
+                        <ul>
+                            <li class="statusOption status_wait">Gözləyir</li>
+                            <li class="statusOption status_finished">Bitmiş</li>
+                            <li class="statusOption status_active">Aktiv</li>
+                            <li class="statusOption status_cancel">Ləğv</li>
                         </ul>
                     </div>
-                    <div id="inputContainer2" class="status_drop datepicker-input-group">
-                        <span id="selectedOption2">Seç</span>
+                    <div id="statusContainer" class="status_drop datepicker-input-group">
+                        <span id="SelectedStatusDiv">Seç</span>
                     </div>
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="roomPass">
                     Otaq kodu
-                    <input type="text" class="users_input" placeholder="Otaq kodu daxil edin">
+                    <input id="roomPass" type="text" class="users_input" placeholder="Otaq kodu daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
                 <div class="delete_div">
-                    <button class="delete">
+                    <a href="javascript:void(0)" class="delete">
                         <img src="./img/trash.svg" alt="">
                         Otağı sil
-                    </button>
+                    </a>
+                    <div class="pop_up">
+                        <div class="pop_bg"></div>
+                        <div class="pop_up_main">
+                            <h4 class="pop_up_head">
+                                Müştərini sil
+                                <div class="close_btn">
+                                    <img src="./img/x_icon.svg" alt="">
+                                </div>
+                            </h4>
+                            <p class="pop_up_text">
+                                Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.
+                                Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <div class="pop_up_buttons">   
+                                <a class="back_btn" href="javascript:void(0)">
+                                    Geri qayıt
+                                </a>
+                                <a class="delete_btn" href="javascript:void(0)">
+                                    Sil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="save_div">
                     <button class="new_btn">
                         Yadda saxla
                     </button>
                 </div>
+                <span class="notification notification_deleted"><img src="./img/room.png" alt="">Müştəri rezervasiyadan silindi</span>
+                <span class="notification notification_access"><img src="./img/room.png" alt="">Dəyişikliklər yadda saxlanıldı</span>
             </form>
         </section>
     </main>

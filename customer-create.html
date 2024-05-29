@@ -69,47 +69,79 @@
                 Müştəri
             </h1>
             <form action="" class="create_form filter">
-                <label for="">
+                <label for="fin">
                     FIN kodu
-                    <input type="text" class="users_input" placeholder="FIN kod daxil edin">
+                    <input id="fin" type="text" class="users_input" placeholder="FIN kod daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="serialNumber">
                     Seriya No
-                    <input type="text" class="users_input" placeholder="Ad daxil edin">
+                    <input id="serialNumber" type="text" class="users_input" placeholder="Ad daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="name">
                     Ad
-                    <input type="text" class="users_input" placeholder="Ad daxil edin">
+                    <input id="name" type="text" class="users_input text_input" placeholder="Ad daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="phone">
                     Telefon nömrəsi
-                    <input type="text" class="users_input phone" placeholder="+994 55 555 55 55">
+                    <input id="phone" type="text" class="users_input phone" placeholder="+994 55 555 55 55">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="surname">
                     Soyadı
-                    <input type="text" class="users_input" placeholder="Soyad daxil edin">
+                    <input id="surname" type="text" class="users_input text_input" placeholder="Soyad daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="carNumber">
                     Avtomobil qeydiyyat nişanı
-                    <input type="text" class="users_input" placeholder="Qeyd edin">
+                    <input id="carNumber" type="text" class="users_input" placeholder="Qeyd edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="" class="room_number ">
+                <label for="birthday" class="room_number ">
                     Doğum tarixi
                     <div class="datepicker-input-group">     
-                        <input type="text"  placeholder="Seçin" class="birthday">
+                        <input id="birthday" type="text"  placeholder="Seçin" class="birthday">
+                        <span class="err">düzgün daxil edilməyib</span>
                     </div>
                 </label>
                 <div class="delete_div">
-                    <button class="delete">
+                    <a href="javascript:void(0)" class="delete">
                         <img src="./img/trash.svg" alt="">
                         Müştərini sil
-                    </button>
+                    </a>
+                    <div class="pop_up">
+                        <div class="pop_bg"></div>
+                        <div class="pop_up_main">
+                            <h4 class="pop_up_head">
+                                Müştərini sil
+                                <div class="close_btn">
+                                    <img src="./img/x_icon.svg" alt="">
+                                </div>
+                            </h4>
+                            <p class="pop_up_text">
+                                Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.
+                                Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <div class="pop_up_buttons">   
+                                <a class="back_btn" href="javascript:void(0)">
+                                    Geri qayıt
+                                </a>
+                                <a class="delete_btn" href="javascript:void(0)">
+                                    Sil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="save_div">
                     <button class="new_btn">
                         Yadda saxla
                     </button>
                 </div>
+                <span class="notification notification_deleted"><img src="./img/room.png" alt="">Müştəri rezervasiyadan silindi</span>
+                <span class="notification notification_access"><img src="./img/room.png" alt="">Dəyişikliklər yadda saxlanıldı</span>
             </form>
         </section>
     </main>
