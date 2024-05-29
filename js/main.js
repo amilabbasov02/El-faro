@@ -26,7 +26,12 @@ $(document).ready(function() {
     })
     $("#exitDate").datepicker({
         dateFormat: "dd-mm-yy",
-        buttonText: "Seçin"
+        buttonText: "Seçin",
+    })
+    $(".birthday").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "c-100:c+10"
     })
     function selectOption1(optionElement) {
         var selectedSpan = $("#selectedOption1");
@@ -89,6 +94,16 @@ $(document).ready(function() {
         }, function(start, end, label) {
             console.log("A new date selection was made: " + start.format('MM/DD/YYYY') + ' to ' + end.format('MM/DD/YYYY'));
         });
+    });
+    $('.password img').click(function(){
+        var input = $(this).siblings('.users_input');
+        if (input.attr('type') === 'password') {
+            input.attr('type', 'text');
+            $(".password img").toggle();
+        } else {
+            input.attr('type', 'password');
+            $(".password img").toggle();
+        }
     });
     var options = {
         series: [
