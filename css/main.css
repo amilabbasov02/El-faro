@@ -1211,3 +1211,13 @@ header .container{
     justify-content: center;
     height: 100vh;
 }
+.err{
+    color: #E07E1B;
+    display: none;
+}
+.error .err{
+    display: inline;
+}
+a{
+    text-decoration: none;
+}

@@ -55,9 +55,9 @@
         </div>
         <div class="sidebar_bottom">
             <img src="./img/Profile.png" class="user_img" alt="">
-            <p class="user_name">
+            <a href="./pass-reset.html" class="user_name">
                 Shahin Shahbazov
-            </p>
+            </a>
             <a href="#" class="exit">
                 <img src="./img/logout.png" alt="">
             </a>
@@ -69,39 +69,46 @@
                 Müştəri
             </h1>
             <form action="" class="create_form filter">
-                <label for="">
+                <label for="name"" class="error">
                     Ad
-                    <input type="text" class="users_input" placeholder="Ad daxil edin">
+                    <input id="name" type="text" class="users_input" placeholder="Ad daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="work">
                     Vəzifəsi
-                    <input type="text" class="users_input phone" placeholder="Vəzifəni daxil edin">
+                    <input id="work" type="text" class="users_input phone" placeholder="Vəzifəni daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="surname">
                     Soyadı
-                    <input type="text" class="users_input" placeholder="Soyad daxil edin">
+                    <input id="surname" type="text" class="users_input" placeholder="Soyad daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="phone">
                     Telefon nömrəsi
-                    <input type="text" class="users_input phone" placeholder="+994 55 555 55 55">
+                    <input id="phone" type="text" class="users_input phone" placeholder="+994 55 555 55 55">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="">
+                <label for="e-mail">
                     E-poçt
-                    <input type="email" class="users_input phone" placeholder="E-poçt daxil edin">
+                    <input id="e-mail" type="email" class="users_input phone" placeholder="E-poçt daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
-                <label for="" class="room_number ">
+                <label for="birthday" class="room_number ">
                     Doğum tarixi
                     <div class="datepicker-input-group">     
-                        <input type="text"  placeholder="Seçin" class="birthday">
+                        <input id="birthday" type="text"  placeholder="Seçin" class="birthday">
                     </div>
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
                 <label for="">
                     Şifrə / Şifrəni dəyiş
-                    <div for="" class="password">
-                        <input type="password" class="users_input" placeholder="Şifrənizi daxil edin">
+                    <div for="pass" class="password">
+                        <input id="pass" type="password" class="users_input" placeholder="Şifrənizi daxil edin">
                         <img src="./img/eye.svg" style="display: none;" alt="">
                         <img src="./img/eye_slash.svg" alt="">
                     </div>
+                    <span class="err">düzgün daxil edilməyib</span>
                 </label>
                 <div class="delete_div">
                     <button class="delete">
