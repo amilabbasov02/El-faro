@@ -56,6 +56,7 @@ header{
     font-style: normal;
     font-weight: 590;
     line-height: 36px;
+    width: 100%;
 }
 .new_btn{
     background: #159444;
@@ -1385,4 +1386,114 @@ a{
 .reservation_btn:hover{
     border: 1px solid #077DB2;
     background: #E5F8FF;
+}
+.reservation_price{
+    margin-top: 16px;
+    color: #484A4D;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: 44px;
+}
+.checkbox{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    color: #17181A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+}
+.checkbox input{
+    width: 20px !important;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.accordion_head{
+    color:  #17181A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: 24px;
+}
+.customer_accordion{
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: #EEF0F2;
+    margin: 16px 0;
+}
+.customer_accordion img{
+    transition: 0.3s all ease-in-out;
+}
+.active .customer_accordion img{
+    transform: rotate(180deg);
+}
+.search_fin{
+    display: flex;
+    margin-top: 12px;
+}
+.search_fin input{
+    margin-right: 16px;
+    margin-top: 0;
+}
+.create_form .search_icon{
+    width: 47px !important;
+    padding: 8px;
+    height: 40px !important;
+    background-color: rgba(23, 24, 25, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.accordion_main{
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease-in-out;
+}
+.active .accordion_main{
+    height: 388px;
+    opacity: 1;
+    visibility: visible;
+}
+.customer_checkbox{
+    align-items: end;
+}
+.disable .search_icon{
+    border-radius: 8px;
+    background: #FCF2DC;
+}
+.disable label input:not(#fin){
+    border: 1px solid rgba(23, 24, 25, 0.12);
+}
+.disable label:not(.not-disable){
+    color: rgba(23, 24, 25, 0.38);
+}
+.new_customer{
+    margin-top: 24px;
+}
+.new_customer a{
+    max-width: 160px;
+    display: flex;
+    height: 40px;
+    padding: 0px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid #DCDEE0;
+    color: var(--Primary-50, #8F7235);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: 20px;  
 }
