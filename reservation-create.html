@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/select2.mis.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <title>El Faro</title>
+</head>
+
+<body>
+    <section id="sidebar">
+        <div class="sidebar_top">
+            <a href="" class="logo">
+                <img src="./img/Logo.png" alt="">
+            </a>
+            <ul class="navbar">
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/home.png" alt="">
+                        Ana səhifə
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/user.png" alt="">
+                        İstifadəçilər
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/category.png" alt="">
+                        Kateqoriyalar
+                    </a>
+                </li>
+                <li class="nav_item active">
+                    <a href="#">
+                        <img src="./img/room.png" alt="">
+                        Otaqlar
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/reserve.png" alt="">
+                        Rezervasiyalar
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        <img src="./img/customer.png" alt="">
+                        Müştərilər
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar_bottom">
+            <img src="./img/Profile.png" class="user_img" alt="">
+            <a href="./pass-reset.html" class="user_name">
+                Shahin Shahbazov
+            </a>
+            <a href="#" class="exit">
+                <img src="./img/logout.png" alt="">
+            </a>
+        </div>
+    </section>
+    <main>
+        <section id="reservation" class="main_block container create">
+            <h1 class="head_text">
+                Yeni rezervasiya
+            </h1>
+            <form action="" class="create_form filter">
+                <label class="reservation_type">
+                    Rezervasiya tipi
+                    <div class="reservation_buttons">   
+                        <a class="reservation_btn active" href="javascript:void(0)">
+                            Şəxsi
+                        </a>
+                        <a class="reservation_btn" href="javascript:void(0)">
+                            Şirkət
+                        </a>
+                    </div>
+                </label>
+                <label for="name">
+                    Ad
+                    <input id="name" type="text" class="users_input text_input" placeholder="Ad daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
+                </label>
+                <label>
+                    Vəzifəsi
+                    <select name="" id="" class="room_select">
+                        <option value="deluxe king">
+                            Deluxe king
+                        </option>
+                        <option value="Junior suite">
+                            Junior suite
+                        </option>
+                        <option value="Standart">
+                            Standart
+                        </option>
+                        <option value="Family suite">
+                            Family suite
+                        </option>
+                        <option value="Suite">
+                            Suite
+                        </option>
+                        <option value="Suite">
+                            Suite
+                        </option>
+                    </select>
+                </label>
+                <label for="surname">
+                    Soyadı
+                    <input id="surname" type="text" class="users_input text_input" placeholder="Soyad daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
+                </label>
+                <label for="phone">
+                    Telefon nömrəsi
+                    <input id="phone" type="text" maxlength="17" class="users_input phone" placeholder="+994 55 555 55 55">
+                    <span class="err">düzgün daxil edilməyib</span>
+                </label>
+                <label for="e-mail">
+                    E-poçt
+                    <input id="e-mail" type="email" class="users_input phone" placeholder="E-poçt daxil edin">
+                    <span class="err">düzgün daxil edilməyib</span>
+                </label>
+                <label for="">
+                    Şifrə / Şifrəni dəyiş
+                    <div for="pass" class="password">
+                        <input id="pass" type="password" class="users_input" placeholder="Şifrənizi daxil edin">
+                        <img src="./img/eye.svg" style="display: none;" alt="">
+                        <img src="./img/eye_slash.svg" alt="">
+                        <span class="err">düzgün daxil edilməyib</span>
+                    </div>
+                </label>
+                <div class="delete_div">
+                    <a href="javascript:void(0)" class="delete">
+                        <img src="./img/trash.svg" alt="">
+                        Müştərini sil
+                    </a>
+                    <div class="pop_up">
+                        <div class="pop_bg"></div>
+                        <div class="pop_up_main">
+                            <h4 class="pop_up_head">
+                                Müştərini sil
+                                <div class="close_btn">
+                                    <img src="./img/x_icon.svg" alt="">
+                                </div>
+                            </h4>
+                            <p class="pop_up_text">
+                                Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.
+                                Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <div class="pop_up_buttons">   
+                                <a class="back_btn" href="javascript:void(0)">
+                                    Geri qayıt
+                                </a>
+                                <a class="delete_btn" href="javascript:void(0)">
+                                    Sil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="save_div">
+                    <button class="new_btn">
+                        Yadda saxla
+                    </button>
+                </div>
+                <span class="notification notification_deleted"><img src="./img/customer.png" alt="">Müştəri rezervasiyadan silindi</span>
+                <span class="notification notification_access"><img src="./img/customer.png" alt="">Dəyişikliklər yadda saxlanıldı</span>
+            </form>
+        </section>
+    </main>
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

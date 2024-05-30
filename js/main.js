@@ -128,6 +128,29 @@ $(document).ready(function() {
             }, 2000);
         }
     });
+    $('.form_sub').on('submit', function() {
+        event.preventDefault();
+
+        var allFilled = true;
+    
+        $('.form_sub input').each(function() {
+            var input = $(this);
+            if (input.val().trim() === '') {
+                input.parent().addClass('error');
+                allFilled = false;
+            } else {
+                input.parent().removeClass('error');
+            }
+        });
+    
+        if (allFilled = false) {
+            $('.notification_fail').css('display', 'flex').fadeIn();
+    
+            setTimeout(function() {
+                $('.notification_fail').fadeOut();
+            }, 2000);
+        }
+    });
     $(".delete").click(function(){
         $(".pop_up").toggle()
     })
@@ -164,6 +187,10 @@ $(document).ready(function() {
         var formattedValue = numericValue.replace(/(\+\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3 $4 $5");
         $(this).val(formattedValue);    
     });
+    $(".reservation_btn").click(function(){
+        $(".reservation_btn").removeClass("active")
+        $(this).addClass("active")
+    })
     var options = {
         series: [
             {
